@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct MarvelApiSwiftUiTestApp: App {
     @Environment(\.scenePhase) private var phase
+    private let pluggableApp = PluggableApp()
     
     var body: some Scene {
         WindowGroup {
@@ -18,16 +19,16 @@ struct MarvelApiSwiftUiTestApp: App {
             switch newPhase {
             
             case .background:
-                print("background")
+                pluggableApp.background()
                 break
             case .inactive:
-                print("inactive")
+                pluggableApp.inactive()
                 break
             case .active:
-                print("active")
+                pluggableApp.active()
                 break
             @unknown default:
-                print("unknown")
+                Log.e("unknown")
                 break
             }
         }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,14 @@
 		E52A0916255438D800DAB976 /* DomainLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E52A0913255438D800DAB976 /* DomainLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E52A0917255438D800DAB976 /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52A0914255438D800DAB976 /* NetworkLayer.framework */; };
 		E52A0918255438D800DAB976 /* NetworkLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E52A0914255438D800DAB976 /* NetworkLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E52A0A6E255449AB00DAB976 /* DataLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52A0A6D255449AB00DAB976 /* DataLayer.framework */; };
+		E52A0A6F255449AB00DAB976 /* DataLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E52A0A6D255449AB00DAB976 /* DataLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E52A0A74255449D000DAB976 /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A0A73255449D000DAB976 /* AppService.swift */; };
+		E52A0A7A25544A5100DAB976 /* DependenciesAppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A0A7925544A5100DAB976 /* DependenciesAppService.swift */; };
+		E52A0A8125544AA400DAB976 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A0A8025544AA400DAB976 /* Log.swift */; };
+		E52A0A8725544ABD00DAB976 /* KeyUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A0A8625544ABD00DAB976 /* KeyUtil.swift */; };
+		E52A0A8B25544AEA00DAB976 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = E52A0A8A25544AEA00DAB976 /* Keys.plist */; };
+		E52A0A9025544BAF00DAB976 /* PluggableApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A0A8F25544BAF00DAB976 /* PluggableApp.swift */; };
 		E579E8AD255401C900C5F5AC /* BaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E579E8AC255401C900C5F5AC /* BaseApp.swift */; };
 		E579E8C3255434DE00C5F5AC /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E579E8C2255434DE00C5F5AC /* MainScreen.swift */; };
 		E5EDB1672553FAC3009D3DF9 /* MarvelApiSwiftUiTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EDB1662553FAC3009D3DF9 /* MarvelApiSwiftUiTestApp.swift */; };
@@ -49,6 +57,7 @@
 			files = (
 				E52A0916255438D800DAB976 /* DomainLayer.framework in Embed Frameworks */,
 				E52A0918255438D800DAB976 /* NetworkLayer.framework in Embed Frameworks */,
+				E52A0A6F255449AB00DAB976 /* DataLayer.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,6 +76,13 @@
 		D4A7547763B91E8E3AEB07E2 /* Pods-MarvelApiSwiftUiTest-MarvelApiSwiftUiTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelApiSwiftUiTest-MarvelApiSwiftUiTestUITests.release.xcconfig"; path = "Target Support Files/Pods-MarvelApiSwiftUiTest-MarvelApiSwiftUiTestUITests/Pods-MarvelApiSwiftUiTest-MarvelApiSwiftUiTestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E52A0913255438D800DAB976 /* DomainLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DomainLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E52A0914255438D800DAB976 /* NetworkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E52A0A6D255449AB00DAB976 /* DataLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DataLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E52A0A73255449D000DAB976 /* AppService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppService.swift; sourceTree = "<group>"; };
+		E52A0A7925544A5100DAB976 /* DependenciesAppService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesAppService.swift; sourceTree = "<group>"; };
+		E52A0A8025544AA400DAB976 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		E52A0A8625544ABD00DAB976 /* KeyUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyUtil.swift; sourceTree = "<group>"; };
+		E52A0A8A25544AEA00DAB976 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
+		E52A0A8F25544BAF00DAB976 /* PluggableApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PluggableApp.swift; sourceTree = "<group>"; };
 		E579E8AC255401C900C5F5AC /* BaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApp.swift; sourceTree = "<group>"; };
 		E579E8C2255434DE00C5F5AC /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		E5EDB1632553FAC3009D3DF9 /* MarvelApiSwiftUiTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelApiSwiftUiTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +105,7 @@
 			files = (
 				E52A0917255438D800DAB976 /* NetworkLayer.framework in Frameworks */,
 				E52A0915255438D800DAB976 /* DomainLayer.framework in Frameworks */,
+				E52A0A6E255449AB00DAB976 /* DataLayer.framework in Frameworks */,
 				003AA87C9C92D3C410068967 /* Pods_MarvelApiSwiftUiTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -125,6 +142,32 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E52A0A72255449C200DAB976 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E52A0A7925544A5100DAB976 /* DependenciesAppService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E52A0A7F25544A9900DAB976 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E52A0A8025544AA400DAB976 /* Log.swift */,
+				E52A0A8625544ABD00DAB976 /* KeyUtil.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E52A0A8E25544B4A00DAB976 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E52A0A73255449D000DAB976 /* AppService.swift */,
+				E52A0A8F25544BAF00DAB976 /* PluggableApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		E579E8C1255434D300C5F5AC /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,10 +201,14 @@
 		E5EDB1652553FAC3009D3DF9 /* MarvelApiSwiftUiTest */ = {
 			isa = PBXGroup;
 			children = (
+				E52A0A8E25544B4A00DAB976 /* App */,
+				E52A0A7F25544A9900DAB976 /* Utils */,
+				E52A0A72255449C200DAB976 /* Services */,
 				E579E8C1255434D300C5F5AC /* Screens */,
 				E5EDB1662553FAC3009D3DF9 /* MarvelApiSwiftUiTestApp.swift */,
 				E5EDB16A2553FAC4009D3DF9 /* Assets.xcassets */,
 				E5EDB16F2553FAC4009D3DF9 /* Info.plist */,
+				E52A0A8A25544AEA00DAB976 /* Keys.plist */,
 				E5EDB16C2553FAC4009D3DF9 /* Preview Content */,
 				E579E8AC255401C900C5F5AC /* BaseApp.swift */,
 			);
@@ -197,6 +244,7 @@
 		FEF69289E30ADB368625C72D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E52A0A6D255449AB00DAB976 /* DataLayer.framework */,
 				E52A0913255438D800DAB976 /* DomainLayer.framework */,
 				E52A0914255438D800DAB976 /* NetworkLayer.framework */,
 				922265333B4DE7101BF4CEB8 /* Pods_MarvelApiSwiftUiTest.framework */,
@@ -315,6 +363,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E52A0A8B25544AEA00DAB976 /* Keys.plist in Resources */,
 				E5EDB16E2553FAC4009D3DF9 /* Preview Assets.xcassets in Resources */,
 				E5EDB16B2553FAC4009D3DF9 /* Assets.xcassets in Resources */,
 			);
@@ -444,8 +493,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E52A0A8725544ABD00DAB976 /* KeyUtil.swift in Sources */,
+				E52A0A9025544BAF00DAB976 /* PluggableApp.swift in Sources */,
 				E579E8C3255434DE00C5F5AC /* MainScreen.swift in Sources */,
+				E52A0A74255449D000DAB976 /* AppService.swift in Sources */,
+				E52A0A8125544AA400DAB976 /* Log.swift in Sources */,
 				E5EDB1672553FAC3009D3DF9 /* MarvelApiSwiftUiTestApp.swift in Sources */,
+				E52A0A7A25544A5100DAB976 /* DependenciesAppService.swift in Sources */,
 				E579E8AD255401C900C5F5AC /* BaseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -609,7 +663,7 @@
 				DEVELOPMENT_TEAM = Y9CYE9NBLT;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MarvelApiSwiftUiTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -632,7 +686,7 @@
 				DEVELOPMENT_TEAM = Y9CYE9NBLT;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MarvelApiSwiftUiTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
