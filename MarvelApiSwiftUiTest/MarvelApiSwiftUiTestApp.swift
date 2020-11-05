@@ -14,7 +14,7 @@ struct MarvelApiSwiftUiTestApp: App {
     
     var body: some Scene {
         WindowGroup {
-            MainScreen()
+            MainScreen(viewModel: MainViewModel())
         }.onChange(of: phase) { newPhase in
             switch newPhase {
             

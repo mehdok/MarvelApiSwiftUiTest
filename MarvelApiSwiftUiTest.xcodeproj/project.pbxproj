@@ -21,6 +21,9 @@
 		E52A0A8725544ABD00DAB976 /* KeyUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A0A8625544ABD00DAB976 /* KeyUtil.swift */; };
 		E52A0A8B25544AEA00DAB976 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = E52A0A8A25544AEA00DAB976 /* Keys.plist */; };
 		E52A0A9025544BAF00DAB976 /* PluggableApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A0A8F25544BAF00DAB976 /* PluggableApp.swift */; };
+		E52A0AA72554509D00DAB976 /* BaseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A0AA62554509D00DAB976 /* BaseScreen.swift */; };
+		E52A0AAB255450DD00DAB976 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A0AAA255450DD00DAB976 /* BaseViewModel.swift */; };
+		E52A0AAF255454B400DAB976 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A0AAE255454B400DAB976 /* MainViewModel.swift */; };
 		E579E8AD255401C900C5F5AC /* BaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E579E8AC255401C900C5F5AC /* BaseApp.swift */; };
 		E579E8C3255434DE00C5F5AC /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E579E8C2255434DE00C5F5AC /* MainScreen.swift */; };
 		E5EDB1672553FAC3009D3DF9 /* MarvelApiSwiftUiTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EDB1662553FAC3009D3DF9 /* MarvelApiSwiftUiTestApp.swift */; };
@@ -83,6 +86,9 @@
 		E52A0A8625544ABD00DAB976 /* KeyUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyUtil.swift; sourceTree = "<group>"; };
 		E52A0A8A25544AEA00DAB976 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		E52A0A8F25544BAF00DAB976 /* PluggableApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PluggableApp.swift; sourceTree = "<group>"; };
+		E52A0AA62554509D00DAB976 /* BaseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseScreen.swift; sourceTree = "<group>"; };
+		E52A0AAA255450DD00DAB976 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		E52A0AAE255454B400DAB976 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		E579E8AC255401C900C5F5AC /* BaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApp.swift; sourceTree = "<group>"; };
 		E579E8C2255434DE00C5F5AC /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		E5EDB1632553FAC3009D3DF9 /* MarvelApiSwiftUiTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelApiSwiftUiTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,10 +174,20 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		E52A0AA52554508900DAB976 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E52A0AA62554509D00DAB976 /* BaseScreen.swift */,
+				E52A0AAA255450DD00DAB976 /* BaseViewModel.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		E579E8C1255434D300C5F5AC /* Screens */ = {
 			isa = PBXGroup;
 			children = (
 				E579E8C2255434DE00C5F5AC /* MainScreen.swift */,
+				E52A0AAE255454B400DAB976 /* MainViewModel.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -201,6 +217,7 @@
 		E5EDB1652553FAC3009D3DF9 /* MarvelApiSwiftUiTest */ = {
 			isa = PBXGroup;
 			children = (
+				E52A0AA52554508900DAB976 /* Base */,
 				E52A0A8E25544B4A00DAB976 /* App */,
 				E52A0A7F25544A9900DAB976 /* Utils */,
 				E52A0A72255449C200DAB976 /* Services */,
@@ -494,6 +511,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E52A0A8725544ABD00DAB976 /* KeyUtil.swift in Sources */,
+				E52A0AAB255450DD00DAB976 /* BaseViewModel.swift in Sources */,
 				E52A0A9025544BAF00DAB976 /* PluggableApp.swift in Sources */,
 				E579E8C3255434DE00C5F5AC /* MainScreen.swift in Sources */,
 				E52A0A74255449D000DAB976 /* AppService.swift in Sources */,
@@ -501,6 +519,8 @@
 				E5EDB1672553FAC3009D3DF9 /* MarvelApiSwiftUiTestApp.swift in Sources */,
 				E52A0A7A25544A5100DAB976 /* DependenciesAppService.swift in Sources */,
 				E579E8AD255401C900C5F5AC /* BaseApp.swift in Sources */,
+				E52A0AA72554509D00DAB976 /* BaseScreen.swift in Sources */,
+				E52A0AAF255454B400DAB976 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
