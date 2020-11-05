@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E579E8AD255401C900C5F5AC /* BaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E579E8AC255401C900C5F5AC /* BaseApp.swift */; };
+		E579E8C3255434DE00C5F5AC /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E579E8C2255434DE00C5F5AC /* MainScreen.swift */; };
 		E5EDB1672553FAC3009D3DF9 /* MarvelApiSwiftUiTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EDB1662553FAC3009D3DF9 /* MarvelApiSwiftUiTestApp.swift */; };
-		E5EDB1692553FAC3009D3DF9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EDB1682553FAC3009D3DF9 /* ContentView.swift */; };
 		E5EDB16B2553FAC4009D3DF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5EDB16A2553FAC4009D3DF9 /* Assets.xcassets */; };
 		E5EDB16E2553FAC4009D3DF9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5EDB16D2553FAC4009D3DF9 /* Preview Assets.xcassets */; };
 		E5EDB1792553FAC4009D3DF9 /* MarvelApiSwiftUiTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EDB1782553FAC4009D3DF9 /* MarvelApiSwiftUiTestTests.swift */; };
@@ -33,9 +34,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E579E8AC255401C900C5F5AC /* BaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApp.swift; sourceTree = "<group>"; };
+		E579E8C2255434DE00C5F5AC /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		E5EDB1632553FAC3009D3DF9 /* MarvelApiSwiftUiTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelApiSwiftUiTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5EDB1662553FAC3009D3DF9 /* MarvelApiSwiftUiTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelApiSwiftUiTestApp.swift; sourceTree = "<group>"; };
-		E5EDB1682553FAC3009D3DF9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E5EDB16A2553FAC4009D3DF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5EDB16D2553FAC4009D3DF9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E5EDB16F2553FAC4009D3DF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,6 +74,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E579E8C1255434D300C5F5AC /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				E579E8C2255434DE00C5F5AC /* MainScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 		E5EDB15A2553FAC3009D3DF9 = {
 			isa = PBXGroup;
 			children = (
@@ -95,11 +105,12 @@
 		E5EDB1652553FAC3009D3DF9 /* MarvelApiSwiftUiTest */ = {
 			isa = PBXGroup;
 			children = (
+				E579E8C1255434D300C5F5AC /* Screens */,
 				E5EDB1662553FAC3009D3DF9 /* MarvelApiSwiftUiTestApp.swift */,
-				E5EDB1682553FAC3009D3DF9 /* ContentView.swift */,
 				E5EDB16A2553FAC4009D3DF9 /* Assets.xcassets */,
 				E5EDB16F2553FAC4009D3DF9 /* Info.plist */,
 				E5EDB16C2553FAC4009D3DF9 /* Preview Content */,
+				E579E8AC255401C900C5F5AC /* BaseApp.swift */,
 			);
 			path = MarvelApiSwiftUiTest;
 			sourceTree = "<group>";
@@ -259,8 +270,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5EDB1692553FAC3009D3DF9 /* ContentView.swift in Sources */,
+				E579E8C3255434DE00C5F5AC /* MainScreen.swift in Sources */,
 				E5EDB1672553FAC3009D3DF9 /* MarvelApiSwiftUiTestApp.swift in Sources */,
+				E579E8AD255401C900C5F5AC /* BaseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
