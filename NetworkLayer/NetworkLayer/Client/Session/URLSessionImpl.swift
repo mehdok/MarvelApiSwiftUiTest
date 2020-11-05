@@ -6,9 +6,10 @@
 //
 
 class URLSessionImpl: URLSessionProtocol {
-    lazy var session: URLSession = {
-        let config = URLSessionConfiguration
-            .background(withIdentifier: String(describing: self))
-        return URLSession(configuration: config)
-    }()
+    var session: URLSession
+    
+    init(session: URLSession) {
+        self.session = session
+    }
+    
 }

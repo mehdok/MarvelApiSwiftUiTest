@@ -11,7 +11,6 @@
 		E52A08FB2554388700DAB976 /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52A08F12554388700DAB976 /* NetworkLayer.framework */; };
 		E52A09002554388700DAB976 /* NetworkLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A08FF2554388700DAB976 /* NetworkLayerTests.swift */; };
 		E52A09022554388700DAB976 /* NetworkLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = E52A08F42554388700DAB976 /* NetworkLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E52A090E255438A800DAB976 /* Models in Resources */ = {isa = PBXBuildFile; fileRef = E52A090D255438A800DAB976 /* Models */; };
 		E52A094B25543ADF00DAB976 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A094A25543ADF00DAB976 /* URLSessionProtocol.swift */; };
 		E52A094F25543AE900DAB976 /* DomainLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52A094E25543AE900DAB976 /* DomainLayer.framework */; };
 		E52A095025543AE900DAB976 /* DomainLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E52A094E25543AE900DAB976 /* DomainLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -21,6 +20,22 @@
 		E52A09DA25543F1800DAB976 /* BaseApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A09D925543F1800DAB976 /* BaseApiClient.swift */; };
 		E52A09DD25543F5E00DAB976 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A09DC25543F5E00DAB976 /* ApiClient.swift */; };
 		E52A09F0255445E200DAB976 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A09EF255445E200DAB976 /* StringExt.swift */; };
+		E52A0A372554479700DAB976 /* NetworkModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A0A362554479700DAB976 /* NetworkModule.swift */; };
+		E52A0A4A255447DF00DAB976 /* OStorySummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A0A3C255447DE00DAB976 /* OStorySummary.swift */; };
+		E52A0A4B255447DF00DAB976 /* OSeriesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A0A3D255447DE00DAB976 /* OSeriesList.swift */; };
+		E52A0A4C255447DF00DAB976 /* OCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A0A3E255447DE00DAB976 /* OCharacter.swift */; };
+		E52A0A4D255447DF00DAB976 /* OCharacterDataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A0A3F255447DE00DAB976 /* OCharacterDataContainer.swift */; };
+		E52A0A4E255447DF00DAB976 /* OSeriesSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A0A40255447DE00DAB976 /* OSeriesSummary.swift */; };
+		E52A0A4F255447DF00DAB976 /* OEventSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A0A41255447DF00DAB976 /* OEventSummary.swift */; };
+		E52A0A50255447DF00DAB976 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A0A42255447DF00DAB976 /* BaseModel.swift */; };
+		E52A0A51255447DF00DAB976 /* OStoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A0A43255447DF00DAB976 /* OStoryList.swift */; };
+		E52A0A52255447DF00DAB976 /* OUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A0A44255447DF00DAB976 /* OUrl.swift */; };
+		E52A0A53255447DF00DAB976 /* OImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A0A45255447DF00DAB976 /* OImage.swift */; };
+		E52A0A54255447DF00DAB976 /* OEventList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A0A46255447DF00DAB976 /* OEventList.swift */; };
+		E52A0A55255447DF00DAB976 /* OComicSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A0A47255447DF00DAB976 /* OComicSummary.swift */; };
+		E52A0A56255447DF00DAB976 /* OCharacterDataWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A0A48255447DF00DAB976 /* OCharacterDataWrapper.swift */; };
+		E52A0A57255447DF00DAB976 /* OComicList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A0A49255447DF00DAB976 /* OComicList.swift */; };
+		E52A0A5B255447F100DAB976 /* MarvelCharacterRepositoryOnlineImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A0A5A255447F100DAB976 /* MarvelCharacterRepositoryOnlineImpl.swift */; };
 		EC9206E10D9E54D5FF3510D6 /* Pods_NetworkLayerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2EA9F6BD553FF4A29B2A71A /* Pods_NetworkLayerTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,8 +75,6 @@
 		E52A08FA2554388700DAB976 /* NetworkLayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkLayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E52A08FF2554388700DAB976 /* NetworkLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayerTests.swift; sourceTree = "<group>"; };
 		E52A09012554388700DAB976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E52A090D255438A800DAB976 /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
-		E52A0912255438B800DAB976 /* MarvelCharacterRepositoryOnlineImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCharacterRepositoryOnlineImpl.swift; sourceTree = "<group>"; };
 		E52A094A25543ADF00DAB976 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
 		E52A094E25543AE900DAB976 /* DomainLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DomainLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E52A09D025543DE400DAB976 /* StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCode.swift; sourceTree = "<group>"; };
@@ -70,6 +83,22 @@
 		E52A09D925543F1800DAB976 /* BaseApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApiClient.swift; sourceTree = "<group>"; };
 		E52A09DC25543F5E00DAB976 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		E52A09EF255445E200DAB976 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
+		E52A0A362554479700DAB976 /* NetworkModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModule.swift; sourceTree = "<group>"; };
+		E52A0A3C255447DE00DAB976 /* OStorySummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OStorySummary.swift; sourceTree = "<group>"; };
+		E52A0A3D255447DE00DAB976 /* OSeriesList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSeriesList.swift; sourceTree = "<group>"; };
+		E52A0A3E255447DE00DAB976 /* OCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCharacter.swift; sourceTree = "<group>"; };
+		E52A0A3F255447DE00DAB976 /* OCharacterDataContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCharacterDataContainer.swift; sourceTree = "<group>"; };
+		E52A0A40255447DE00DAB976 /* OSeriesSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSeriesSummary.swift; sourceTree = "<group>"; };
+		E52A0A41255447DF00DAB976 /* OEventSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OEventSummary.swift; sourceTree = "<group>"; };
+		E52A0A42255447DF00DAB976 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		E52A0A43255447DF00DAB976 /* OStoryList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OStoryList.swift; sourceTree = "<group>"; };
+		E52A0A44255447DF00DAB976 /* OUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OUrl.swift; sourceTree = "<group>"; };
+		E52A0A45255447DF00DAB976 /* OImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OImage.swift; sourceTree = "<group>"; };
+		E52A0A46255447DF00DAB976 /* OEventList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OEventList.swift; sourceTree = "<group>"; };
+		E52A0A47255447DF00DAB976 /* OComicSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OComicSummary.swift; sourceTree = "<group>"; };
+		E52A0A48255447DF00DAB976 /* OCharacterDataWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCharacterDataWrapper.swift; sourceTree = "<group>"; };
+		E52A0A49255447DF00DAB976 /* OComicList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OComicList.swift; sourceTree = "<group>"; };
+		E52A0A5A255447F100DAB976 /* MarvelCharacterRepositoryOnlineImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelCharacterRepositoryOnlineImpl.swift; sourceTree = "<group>"; };
 		EB3C8BBA1C68C28C547B37FC /* Pods-NetworkLayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkLayer.debug.xcconfig"; path = "Target Support Files/Pods-NetworkLayer/Pods-NetworkLayer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,10 +169,11 @@
 		E52A08F32554388700DAB976 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				E52A0A59255447E800DAB976 /* Repositories */,
+				E52A0A3B255447D500DAB976 /* Models */,
+				E52A0A352554479100DAB976 /* Module */,
 				E52A09EE255445D700DAB976 /* Extension */,
 				E52A094825543AC200DAB976 /* Client */,
-				E52A0911255438B800DAB976 /* Repositories */,
-				E52A090D255438A800DAB976 /* Models */,
 				E52A08F42554388700DAB976 /* NetworkLayer.h */,
 				E52A08F52554388700DAB976 /* Info.plist */,
 			);
@@ -157,14 +187,6 @@
 				E52A09012554388700DAB976 /* Info.plist */,
 			);
 			path = NetworkLayerTests;
-			sourceTree = "<group>";
-		};
-		E52A0911255438B800DAB976 /* Repositories */ = {
-			isa = PBXGroup;
-			children = (
-				E52A0912255438B800DAB976 /* MarvelCharacterRepositoryOnlineImpl.swift */,
-			);
-			path = Repositories;
 			sourceTree = "<group>";
 		};
 		E52A094825543AC200DAB976 /* Client */ = {
@@ -194,6 +216,43 @@
 				E52A09EF255445E200DAB976 /* StringExt.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		E52A0A352554479100DAB976 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				E52A0A362554479700DAB976 /* NetworkModule.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		E52A0A3B255447D500DAB976 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E52A0A42255447DF00DAB976 /* BaseModel.swift */,
+				E52A0A3E255447DE00DAB976 /* OCharacter.swift */,
+				E52A0A3F255447DE00DAB976 /* OCharacterDataContainer.swift */,
+				E52A0A48255447DF00DAB976 /* OCharacterDataWrapper.swift */,
+				E52A0A49255447DF00DAB976 /* OComicList.swift */,
+				E52A0A47255447DF00DAB976 /* OComicSummary.swift */,
+				E52A0A46255447DF00DAB976 /* OEventList.swift */,
+				E52A0A41255447DF00DAB976 /* OEventSummary.swift */,
+				E52A0A45255447DF00DAB976 /* OImage.swift */,
+				E52A0A3D255447DE00DAB976 /* OSeriesList.swift */,
+				E52A0A40255447DE00DAB976 /* OSeriesSummary.swift */,
+				E52A0A43255447DF00DAB976 /* OStoryList.swift */,
+				E52A0A3C255447DE00DAB976 /* OStorySummary.swift */,
+				E52A0A44255447DF00DAB976 /* OUrl.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E52A0A59255447E800DAB976 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				E52A0A5A255447F100DAB976 /* MarvelCharacterRepositoryOnlineImpl.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,7 +350,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E52A090E255438A800DAB976 /* Models in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,12 +415,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				E52A09DA25543F1800DAB976 /* BaseApiClient.swift in Sources */,
+				E52A0A4E255447DF00DAB976 /* OSeriesSummary.swift in Sources */,
+				E52A0A55255447DF00DAB976 /* OComicSummary.swift in Sources */,
+				E52A0A4D255447DF00DAB976 /* OCharacterDataContainer.swift in Sources */,
 				E52A09D125543DE400DAB976 /* StatusCode.swift in Sources */,
+				E52A0A4B255447DF00DAB976 /* OSeriesList.swift in Sources */,
+				E52A0A53255447DF00DAB976 /* OImage.swift in Sources */,
 				E52A094B25543ADF00DAB976 /* URLSessionProtocol.swift in Sources */,
 				E52A09F0255445E200DAB976 /* StringExt.swift in Sources */,
+				E52A0A51255447DF00DAB976 /* OStoryList.swift in Sources */,
+				E52A0A4F255447DF00DAB976 /* OEventSummary.swift in Sources */,
+				E52A0A57255447DF00DAB976 /* OComicList.swift in Sources */,
 				E52A09D725543EE900DAB976 /* EndPoint.swift in Sources */,
+				E52A0A50255447DF00DAB976 /* BaseModel.swift in Sources */,
 				E52A09D425543E3400DAB976 /* URLSessionImpl.swift in Sources */,
+				E52A0A56255447DF00DAB976 /* OCharacterDataWrapper.swift in Sources */,
+				E52A0A52255447DF00DAB976 /* OUrl.swift in Sources */,
+				E52A0A4C255447DF00DAB976 /* OCharacter.swift in Sources */,
+				E52A0A372554479700DAB976 /* NetworkModule.swift in Sources */,
 				E52A09DD25543F5E00DAB976 /* ApiClient.swift in Sources */,
+				E52A0A5B255447F100DAB976 /* MarvelCharacterRepositoryOnlineImpl.swift in Sources */,
+				E52A0A54255447DF00DAB976 /* OEventList.swift in Sources */,
+				E52A0A4A255447DF00DAB976 /* OStorySummary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

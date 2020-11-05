@@ -33,6 +33,19 @@ target 'NetworkLayer' do
     end
 end
 
+####
+target 'DataLayer' do
+    use_frameworks!
+    workspace 'MarvelApiSwiftUiTest'
+    project 'DataLayer/DataLayer.xcodeproj'
+
+target 'DataLayerTests' do
+      inherit! :search_paths
+      # Pods for testing
+      
+    end
+end
+
 target 'MarvelApiSwiftUiTest' do
   use_frameworks!
 
