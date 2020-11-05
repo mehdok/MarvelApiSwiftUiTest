@@ -1,11 +1,42 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '14.1'
+inhibit_all_warnings!
+
+##
+def king_fisher
+  pod 'Kingfisher', '~> 5.15.7'
+end
+
+
+####
+target 'DomainLayer' do
+    use_frameworks!
+    workspace 'MarvelApiSwiftUiTest'
+    project 'DomainLayer/DomainLayer.xcodeproj'
+    
+target 'DomainLayerTests' do
+      inherit! :search_paths
+      # Pods for testing
+      
+    end
+end
+
+####
+target 'NetworkLayer' do
+    use_frameworks!
+    workspace 'MarvelApiSwiftUiTest'
+    project 'NetworkLayer/NetworkLayer.xcodeproj'
+        
+    target 'NetworkLayerTests' do
+      inherit! :search_paths
+      # Pods for testing
+      
+    end
+end
 
 target 'MarvelApiSwiftUiTest' do
-  # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for MarvelApiSwiftUiTest
+  king_fisher
 
   target 'MarvelApiSwiftUiTestTests' do
     inherit! :search_paths

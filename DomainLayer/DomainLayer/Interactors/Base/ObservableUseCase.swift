@@ -5,7 +5,7 @@
 //  Created by Mehdok on 10/29/20.
 //
 
-import RxSwift
+import Combine
 
 public protocol ObservableUseCase {
     /// The response value emitted by the Observable.
@@ -17,5 +17,5 @@ public protocol ObservableUseCase {
     /// Execute the usecase with specified input and generate specified output
     /// - Parameter input: UseCase input argument
     /// - Returns: Observable of output
-    func execute(_ input: Input) -> Observable<Output>
+    func execute(_ input: Input) -> AnyPublisher<Output, Never>
 }
