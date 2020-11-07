@@ -5,8 +5,8 @@
 //  Created by Mehdok on 11/5/20.
 //
 
-import DomainLayer
 import Combine
+import DomainLayer
 
 struct ApiClient: BaseApiClient {
     private let kUrlEndPoint = "https://gateway.marvel.com:443/v1/public/"
@@ -14,46 +14,38 @@ struct ApiClient: BaseApiClient {
     let session: URLSessionProtocol
     let decoder: JSONDecoder
     let keys: Keys
-    
+
     func call<T: Decodable>(_ endPoint: EndPoint,
-                 headers: [String : String]?,
-                 queries: [URLQueryItem]?,
-                 body: [String : Any]?) -> AnyPublisher<Resource<T>, Never> {
-        return send(endPoint, headers: headers, queries: queries, body: body
-                    )
+                            headers: [String: String]?,
+                            queries: [URLQueryItem]?,
+                            body: [String: Any]?) -> AnyPublisher<Resource<T>, Never>
+    {
+        return send(endPoint, headers: headers, queries: queries, body: body)
             .decode(type: T.self, decoder: decoder)
             .map { Resource.success(response: $0) }
             .mapError {
+                // TODO handle other errors
                 APIError.jsonParseError(description: $0.localizedDescription)
             }
             .catch { Just<Resource>(.failure(error: $0)) }
             .eraseToAnyPublisher()
     }
-    
-
 }
 
 extension ApiClient {
-    private func send(
-        _ endPoint: EndPoint,
-        headers: [String: String]? = nil,
-        queries: [URLQueryItem]? = nil,
-        body: [String: Any]? = nil
-    ) -> AnyPublisher<Data, APIError> {
-        var urlComponenet = URLComponents(string: kUrlEndPoint)!
+    private func send(_ endPoint: EndPoint,
+                      headers: [String: String]? = nil,
+                      queries: [URLQueryItem]? = nil,
+                      body: [String: Any]? = nil) -> AnyPublisher<Data, APIError>
+    {
+        var urlComponenet = URLComponents(string: "\(kUrlEndPoint)\(endPoint.rawValue)")!
 
-        // add end point to base url
-        urlComponenet
-            .queryItems =
-            [URLQueryItem(name: "method", value: endPoint.rawValue)]
-
-        var finalBody = body ?? [:]
         let request = urlRequest(&urlComponenet, method: endPoint.method,
                                  headers: headers, queries: queries,
-                                 body: &finalBody)
+                                 body: body,
+                                 keys: keys)
 
-        return session.dataTaskPublisher(for: request)
-            .eraseToAnyPublisher()
+        return session.dataTaskPublisher(for: request).eraseToAnyPublisher()
     }
 }
 
@@ -61,24 +53,15 @@ extension ApiClient {
     private func urlRequest(_ component: inout URLComponents, method: String,
                             headers: [String: String]? = nil,
                             queries: [URLQueryItem]? = nil,
-                            body: inout [String: Any]) -> URLRequest
+                            body: [String: Any]?,
+                            keys: Keys) -> URLRequest
     {
         // append client id and secret
-        let ts = Date().timeIntervalSince1970
-
-        component.queryItems = [
-            URLQueryItem(name: "ts", value: "\(ts)"),
-            URLQueryItem(name: "apikey", value: keys.publicKey),
-            URLQueryItem(name: "hash", value: "\(ts)\(keys.privateKey)\(keys.publicKey)".md5())
-        ]
+        component.queryItems = authenticationQueries(keys)
 
         // add queries to url
-        if let queries = queries {
-            queries
-                .forEach {
-                    component.queryItems?
-                        .append(URLQueryItem(name: $0.name, value: $0.value))
-                }
+        if let queryItems = queryListFromMap(queries) {
+            component.queryItems?.append(contentsOf: queryItems)
         }
 
         var request = URLRequest(url: component.url!)
@@ -89,16 +72,47 @@ extension ApiClient {
         request.allHTTPHeaderFields = headers
 
         // add body
-        if body.count > 0 {
-            do {
-                let bodyData = try JSONSerialization
-                    .data(withJSONObject: body, options: [])
-                request.httpBody = bodyData
-            } catch {
-                // Log.e(error.localizedDescription)
-            }
+        if let jsonBodyData = bodyData(body) {
+            request.httpBody = jsonBodyData
         }
 
         return request
+    }
+
+    private func authenticationQueries(_ keys: Keys) -> [URLQueryItem] {
+        let ts = Date().timeIntervalSince1970
+
+        return [
+            URLQueryItem(name: "ts", value: "\(ts)"),
+            URLQueryItem(name: "apikey", value: keys.publicKey),
+            URLQueryItem(name: "hash", value: "\(ts)\(keys.privateKey)\(keys.publicKey)".md5())
+        ]
+    }
+
+    private func queryListFromMap(_ queries: [URLQueryItem]?) -> [URLQueryItem]? {
+        var queryItems: [URLQueryItem]?
+
+        if let queries = queries {
+            queryItems = [URLQueryItem]()
+            queries.forEach {
+                queryItems!.append(URLQueryItem(name: $0.name, value: $0.value))
+            }
+        }
+
+        return queryItems
+    }
+
+    private func bodyData(_ body: [String: Any]?) -> Data? {
+        var bodyData: Data?
+        
+        if let body = body, body.count > 0 {
+            do {
+                bodyData = try JSONSerialization.data(withJSONObject: body, options: [])
+            } catch {
+                //nop
+            }
+        }
+
+        return bodyData
     }
 }

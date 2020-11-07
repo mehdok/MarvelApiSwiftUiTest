@@ -40,6 +40,7 @@ extension URLSessionProtocol {
     private func validateStatusCode(_ output: URLSession.DataTaskPublisher
         .Output) -> AnyPublisher<Data, APIError> {
         switch (output.response as? HTTPURLResponse)?.statusCode {
+        // TODO check for range of values
         case .some(HttpStatusCode.ok.rawValue):
             return Result.success(output.data).publisher
                 .eraseToAnyPublisher()
