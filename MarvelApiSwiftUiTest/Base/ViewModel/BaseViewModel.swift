@@ -2,25 +2,23 @@
 //  BaseViewModel.swift
 //  MarvelApiSwiftUiTest
 //
-//  Created by Mehdok on 11/5/20.
+//  Created by Mehdok on 11/10/20.
 //
 
 import Combine
 import DesignSystem
 import DomainLayer
-import Swift
 
 public protocol BaseViewModelProtocol: ObservableObject {}
 
-/// State is the single source of truth. It represents a state of your system and is usually a plain Swift type. Your state is immutable. The only way to transition from one State to another is to emit an Event.
+/// State is the single source of truth. It represents a state of your system and is usually a plain Swift type.
+/// Your state is immutable. The only way to transition from one State to another is to emit an Event.
 public protocol BaseState {}
 
 /// Represents all possible events that can happen in your system which can cause a transition to a new State.
 public protocol BaseEvent {}
 
-open class BaseViewModel<State, Event>:
-    BaseViewModelProtocol where State: BaseState, Event: BaseEvent
-{
+open class BaseViewModel<State, Event>: BaseViewModelProtocol where State: BaseState, Event: BaseEvent {
     @Published private(set) var state: State
     var bag = Set<AnyCancellable>()
     var input = PassthroughSubject<Event, Never>()
@@ -75,7 +73,7 @@ open class BaseViewModel<State, Event>:
         bag.forEach {
             $0.cancel()
         }
-        
+
         bag.removeAll()
     }
 }
