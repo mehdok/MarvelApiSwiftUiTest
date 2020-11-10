@@ -3,7 +3,7 @@ inhibit_all_warnings!
 
 ##
 def king_fisher
-  pod 'Kingfisher', '~> 5.15.7'
+  pod 'Kingfisher/SwiftUI', '~> 5.15.7'
 end
 
 

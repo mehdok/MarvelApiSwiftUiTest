@@ -7,28 +7,37 @@
 
 import Combine
 import DataLayer
-import SwiftUI
 import DomainLayer
+import SwiftUI
+import DesignSystem
 
 struct MainScreen: BaseScreen {
     @ObservedObject var viewModel: MainViewModel
 
     var body: some View {
-        switch viewModel.state {
-        case .idle:
-            Log.i("idle")
-        case .loading:
-                Log.i("loading")
-        case .loaded(let characters):
-            Log.i("loaded: \(characters.count)")
-        case .error(let error):
-            Log.i("error: \(error.localizedDescription)")
-        }
-        
-        return Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        content
             .onAppear {
                 self.viewModel.send(event: .onAppear)
             }
+    }
+
+    private var content: some View {
+        switch viewModel.state {
+        case .idle:
+            return Color.clear.eraseToAnyView()
+        case .loading:
+            return Spinner(isAnimating: true, style: .large).eraseToAnyView()
+        case .loaded(let characters):
+            return list(of: characters).eraseToAnyView()
+        case .error(let error):
+            return Text(error.localizedDescription).eraseToAnyView()
+        }
+    }
+    
+    private func list(of characters: [Character]) -> some View {
+        List(characters, id: \.id) { character in
+            CharacterView(character: character)
+        }
     }
 }
 

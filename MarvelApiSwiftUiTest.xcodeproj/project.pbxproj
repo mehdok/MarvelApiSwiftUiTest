@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		003AA87C9C92D3C410068967 /* Pods_MarvelApiSwiftUiTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922265333B4DE7101BF4CEB8 /* Pods_MarvelApiSwiftUiTest.framework */; };
 		4A4CC4C10EAD37F3C7AA3DA2 /* Pods_MarvelApiSwiftUiTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0E05A5643B9DAF660CBE72 /* Pods_MarvelApiSwiftUiTestTests.framework */; };
+		E51D5C55255AD9ED00412A37 /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51D5C54255AD9ED00412A37 /* CharacterView.swift */; };
+		E51D5C5E255ADB2800412A37 /* CharactersData.json in Resources */ = {isa = PBXBuildFile; fileRef = E51D5C5D255ADB2800412A37 /* CharactersData.json */; };
+		E51D5C64255AE2F500412A37 /* MockJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51D5C63255AE2F500412A37 /* MockJson.swift */; };
+		E51D5C92255AE8E400412A37 /* ViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51D5C91255AE8E400412A37 /* ViewExt.swift */; };
 		E52A0915255438D800DAB976 /* DomainLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52A0913255438D800DAB976 /* DomainLayer.framework */; };
 		E52A0916255438D800DAB976 /* DomainLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E52A0913255438D800DAB976 /* DomainLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E52A0917255438D800DAB976 /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52A0914255438D800DAB976 /* NetworkLayer.framework */; };
@@ -84,6 +88,10 @@
 		BE0E05A5643B9DAF660CBE72 /* Pods_MarvelApiSwiftUiTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelApiSwiftUiTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C38648EE0D800B6BB8DCC506 /* Pods-MarvelApiSwiftUiTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelApiSwiftUiTestTests.debug.xcconfig"; path = "Target Support Files/Pods-MarvelApiSwiftUiTestTests/Pods-MarvelApiSwiftUiTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D4A7547763B91E8E3AEB07E2 /* Pods-MarvelApiSwiftUiTest-MarvelApiSwiftUiTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelApiSwiftUiTest-MarvelApiSwiftUiTestUITests.release.xcconfig"; path = "Target Support Files/Pods-MarvelApiSwiftUiTest-MarvelApiSwiftUiTestUITests/Pods-MarvelApiSwiftUiTest-MarvelApiSwiftUiTestUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E51D5C54255AD9ED00412A37 /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
+		E51D5C5D255ADB2800412A37 /* CharactersData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CharactersData.json; sourceTree = "<group>"; };
+		E51D5C63255AE2F500412A37 /* MockJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockJson.swift; sourceTree = "<group>"; };
+		E51D5C91255AE8E400412A37 /* ViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExt.swift; sourceTree = "<group>"; };
 		E52A0913255438D800DAB976 /* DomainLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DomainLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E52A0914255438D800DAB976 /* NetworkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E52A0A6D255449AB00DAB976 /* DataLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DataLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,6 +169,41 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E51D5C52255AD9C000412A37 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E51D5C53255AD9D100412A37 /* Views */,
+				E579E8C2255434DE00C5F5AC /* MainScreen.swift */,
+				E52A0AAE255454B400DAB976 /* MainViewModel.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		E51D5C53255AD9D100412A37 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E51D5C54255AD9ED00412A37 /* CharacterView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E51D5C5C255ADB1800412A37 /* MockJson */ = {
+			isa = PBXGroup;
+			children = (
+				E51D5C5D255ADB2800412A37 /* CharactersData.json */,
+				E51D5C63255AE2F500412A37 /* MockJson.swift */,
+			);
+			path = MockJson;
+			sourceTree = "<group>";
+		};
+		E51D5C90255AE8CC00412A37 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E51D5C91255AE8E400412A37 /* ViewExt.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		E52A0A72255449C200DAB976 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,8 +244,7 @@
 		E579E8C1255434D300C5F5AC /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				E579E8C2255434DE00C5F5AC /* MainScreen.swift */,
-				E52A0AAE255454B400DAB976 /* MainViewModel.swift */,
+				E51D5C52255AD9C000412A37 /* MainScreen */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -242,6 +284,7 @@
 		E5EDB1652553FAC3009D3DF9 /* MarvelApiSwiftUiTest */ = {
 			isa = PBXGroup;
 			children = (
+				E51D5C90255AE8CC00412A37 /* Extensions */,
 				E52A0AA52554508900DAB976 /* Base */,
 				E52A0A8E25544B4A00DAB976 /* App */,
 				E52A0A7F25544A9900DAB976 /* Utils */,
@@ -260,6 +303,7 @@
 		E5EDB16C2553FAC4009D3DF9 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				E51D5C5C255ADB1800412A37 /* MockJson */,
 				E5EDB16D2553FAC4009D3DF9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -407,6 +451,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E52A0A8B25544AEA00DAB976 /* Keys.plist in Resources */,
+				E51D5C5E255ADB2800412A37 /* CharactersData.json in Resources */,
 				E5EDB16E2553FAC4009D3DF9 /* Preview Assets.xcassets in Resources */,
 				E5EDB16B2553FAC4009D3DF9 /* Assets.xcassets in Resources */,
 			);
@@ -542,7 +587,9 @@
 				E52A0A9025544BAF00DAB976 /* PluggableApp.swift in Sources */,
 				E579E8C3255434DE00C5F5AC /* MainScreen.swift in Sources */,
 				E59FF677255A91F200776EA9 /* System.swift in Sources */,
+				E51D5C55255AD9ED00412A37 /* CharacterView.swift in Sources */,
 				E52A0A74255449D000DAB976 /* AppService.swift in Sources */,
+				E51D5C64255AE2F500412A37 /* MockJson.swift in Sources */,
 				E52A0A8125544AA400DAB976 /* Log.swift in Sources */,
 				E5EDB1672553FAC3009D3DF9 /* MarvelApiSwiftUiTestApp.swift in Sources */,
 				E52A0A7A25544A5100DAB976 /* DependenciesAppService.swift in Sources */,
@@ -550,6 +597,7 @@
 				E59FF68E255A999400776EA9 /* BaseViewModel.swift in Sources */,
 				E52A0AA72554509D00DAB976 /* BaseScreen.swift in Sources */,
 				E59FF684255A951E00776EA9 /* CCPreviewDevice.swift in Sources */,
+				E51D5C92255AE8E400412A37 /* ViewExt.swift in Sources */,
 				E52A0AAF255454B400DAB976 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

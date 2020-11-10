@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3103E540FBB90D4A4719839F /* Pods_DesignSystemTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF85E0A56FFF32D6EDBB26C /* Pods_DesignSystemTests.framework */; };
 		516D32BFDEF97FCB890A9AF6 /* Pods_DesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6381DA6E80E5FACA892B116D /* Pods_DesignSystem.framework */; };
+		E51D5C98255AE98200412A37 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51D5C97255AE98200412A37 /* Spinner.swift */; };
 		E59FF62E255A8C7F00776EA9 /* DesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59FF624255A8C7F00776EA9 /* DesignSystem.framework */; };
 		E59FF633255A8C7F00776EA9 /* DesignSystemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59FF632255A8C7F00776EA9 /* DesignSystemTests.swift */; };
 		E59FF635255A8C7F00776EA9 /* DesignSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = E59FF627255A8C7F00776EA9 /* DesignSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -35,6 +36,7 @@
 		6CA3E9AACFBDC0F41A4865B5 /* Pods-DesignSystem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignSystem.debug.xcconfig"; path = "Target Support Files/Pods-DesignSystem/Pods-DesignSystem.debug.xcconfig"; sourceTree = "<group>"; };
 		796B93D8FF35FF71D9384EA7 /* Pods-DesignSystemTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignSystemTests.release.xcconfig"; path = "Target Support Files/Pods-DesignSystemTests/Pods-DesignSystemTests.release.xcconfig"; sourceTree = "<group>"; };
 		C491B0CE3FD1AE72B642AD70 /* Pods-DesignSystem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignSystem.release.xcconfig"; path = "Target Support Files/Pods-DesignSystem/Pods-DesignSystem.release.xcconfig"; sourceTree = "<group>"; };
+		E51D5C97255AE98200412A37 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		E59FF624255A8C7F00776EA9 /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E59FF627255A8C7F00776EA9 /* DesignSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DesignSystem.h; sourceTree = "<group>"; };
 		E59FF628255A8C7F00776EA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -93,6 +95,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E51D5C96255AE97500412A37 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E51D5C97255AE98200412A37 /* Spinner.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		E59FF61A255A8C7F00776EA9 = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +126,7 @@
 		E59FF626255A8C7F00776EA9 /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				E51D5C96255AE97500412A37 /* Views */,
 				E59FF657255A902A00776EA9 /* DI */,
 				E59FF64C255A8F5100776EA9 /* Modifiers */,
 				E59FF640255A8D1100776EA9 /* ColorPalatte.xcassets */,
@@ -313,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E59FF64E255A8F6200776EA9 /* TextStyle.swift in Sources */,
+				E51D5C98255AE98200412A37 /* Spinner.swift in Sources */,
 				E59FF649255A8F2100776EA9 /* Typography.swift in Sources */,
 				E59FF645255A8E5600776EA9 /* ColorPalatte.swift in Sources */,
 				E59FF654255A8FAA00776EA9 /* Navigation.swift in Sources */,
