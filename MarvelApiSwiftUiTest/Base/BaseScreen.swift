@@ -8,6 +8,6 @@
 import SwiftUI
 
 protocol BaseScreen: View {
-    associatedtype VM: BaseViewModel
-    var viewModel: VM { get set }
+    associatedtype ViewModel: BaseViewModelProtocol
+    var viewModel: Self.ViewModel { get set }
 }

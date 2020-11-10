@@ -5,12 +5,12 @@
 //  Created by Mehdok on 11/5/20.
 //
 
-import SwiftUI
 import Combine
+import SwiftUI
 
 struct MainScreen: BaseScreen {
     @ObservedObject var viewModel: MainViewModel
-    
+
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
@@ -18,6 +18,8 @@ struct MainScreen: BaseScreen {
 
 struct MainScreen_Previews: PreviewProvider {
     static var previews: some View {
-        MainScreen(viewModel: MainViewModel())
+        BasePreview {
+            MainScreen(viewModel: MainViewModel(initialState: .idle))
+        }
     }
 }
