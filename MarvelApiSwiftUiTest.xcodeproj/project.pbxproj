@@ -26,6 +26,8 @@
 		E52A0AAF255454B400DAB976 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A0AAE255454B400DAB976 /* MainViewModel.swift */; };
 		E579E8AD255401C900C5F5AC /* BaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E579E8AC255401C900C5F5AC /* BaseApp.swift */; };
 		E579E8C3255434DE00C5F5AC /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E579E8C2255434DE00C5F5AC /* MainScreen.swift */; };
+		E59FF65D255A907300776EA9 /* DesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59FF65C255A907300776EA9 /* DesignSystem.framework */; };
+		E59FF65E255A907300776EA9 /* DesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E59FF65C255A907300776EA9 /* DesignSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E5EDB1672553FAC3009D3DF9 /* MarvelApiSwiftUiTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EDB1662553FAC3009D3DF9 /* MarvelApiSwiftUiTestApp.swift */; };
 		E5EDB16B2553FAC4009D3DF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5EDB16A2553FAC4009D3DF9 /* Assets.xcassets */; };
 		E5EDB16E2553FAC4009D3DF9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5EDB16D2553FAC4009D3DF9 /* Preview Assets.xcassets */; };
@@ -59,6 +61,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				E52A0916255438D800DAB976 /* DomainLayer.framework in Embed Frameworks */,
+				E59FF65E255A907300776EA9 /* DesignSystem.framework in Embed Frameworks */,
 				E52A0918255438D800DAB976 /* NetworkLayer.framework in Embed Frameworks */,
 				E52A0A6F255449AB00DAB976 /* DataLayer.framework in Embed Frameworks */,
 			);
@@ -91,6 +94,7 @@
 		E52A0AAE255454B400DAB976 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		E579E8AC255401C900C5F5AC /* BaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApp.swift; sourceTree = "<group>"; };
 		E579E8C2255434DE00C5F5AC /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		E59FF65C255A907300776EA9 /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5EDB1632553FAC3009D3DF9 /* MarvelApiSwiftUiTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelApiSwiftUiTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5EDB1662553FAC3009D3DF9 /* MarvelApiSwiftUiTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelApiSwiftUiTestApp.swift; sourceTree = "<group>"; };
 		E5EDB16A2553FAC4009D3DF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -111,6 +115,7 @@
 			files = (
 				E52A0917255438D800DAB976 /* NetworkLayer.framework in Frameworks */,
 				E52A0915255438D800DAB976 /* DomainLayer.framework in Frameworks */,
+				E59FF65D255A907300776EA9 /* DesignSystem.framework in Frameworks */,
 				E52A0A6E255449AB00DAB976 /* DataLayer.framework in Frameworks */,
 				003AA87C9C92D3C410068967 /* Pods_MarvelApiSwiftUiTest.framework in Frameworks */,
 			);
@@ -261,6 +266,7 @@
 		FEF69289E30ADB368625C72D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E59FF65C255A907300776EA9 /* DesignSystem.framework */,
 				E52A0A6D255449AB00DAB976 /* DataLayer.framework */,
 				E52A0913255438D800DAB976 /* DomainLayer.framework */,
 				E52A0914255438D800DAB976 /* NetworkLayer.framework */,

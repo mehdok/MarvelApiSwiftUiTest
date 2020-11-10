@@ -46,6 +46,19 @@ target 'DataLayerTests' do
     end
 end
 
+####
+target 'DesignSystem' do
+    use_frameworks!
+    workspace 'MarvelApiSwiftUiTest'
+    project 'DesignSystem/DesignSystem.xcodeproj'
+
+target 'DesignSystemTests' do
+      inherit! :search_paths
+      # Pods for testing
+      
+    end
+end
+
 target 'MarvelApiSwiftUiTest' do
   use_frameworks!
 
