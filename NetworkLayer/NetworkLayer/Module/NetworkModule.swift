@@ -25,8 +25,9 @@ public struct NetworkModule: NetworkModuleType {
 
 extension NetworkModule {
     fileprivate func component() -> URLSession {
-        let configuration = URLSessionConfiguration
-            .background(withIdentifier: String(describing: URLSessionImpl.self))
+//        let configuration = URLSessionConfiguration
+//            .background(withIdentifier: String(describing: URLSessionImpl.self))
+        let configuration = URLSessionConfiguration.default
         configuration.timeoutIntervalForRequest = 15 // seconds
         configuration.timeoutIntervalForResource = 15
         return URLSession(configuration: configuration)

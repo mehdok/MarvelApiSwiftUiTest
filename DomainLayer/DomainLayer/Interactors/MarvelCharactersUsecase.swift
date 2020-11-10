@@ -7,7 +7,7 @@
 
 import Combine
 
-public typealias CharacterUsecaseParam = (Int, Int)
+public typealias CharacterUsecaseParam = (limit: Int, offset: Int)
 
 public struct MarvelCharactersUsecase: ObservableUseCase {
     let marvelCharacterRepository: MarvelCharacterRepositoryOnline
@@ -21,8 +21,7 @@ public struct MarvelCharactersUsecase: ObservableUseCase {
     public typealias Input = CharacterUsecaseParam
 
     public func execute(_ input: CharacterUsecaseParam) -> AnyPublisher<Resource<CharacterDataWrapper>, Never> {
-        let (limit, offset) = input
         return marvelCharacterRepository
-            .getCharacters(limit: limit, offset: offset)
+            .getCharacters(limit: input.limit, offset: input.offset)
     }
 }

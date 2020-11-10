@@ -23,7 +23,7 @@ open class BaseViewModel<State, Event>: BaseViewModelProtocol where State: BaseS
     var bag = Set<AnyCancellable>()
     var input = PassthroughSubject<Event, Never>()
 
-    init(initialState: State) {
+    public init(initialState: State) {
         state = initialState
         Publishers.system(initial: state,
                           reduce: reduce,

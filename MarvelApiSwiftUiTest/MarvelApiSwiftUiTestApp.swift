@@ -6,15 +6,19 @@
 //
 
 import SwiftUI
+import DomainLayer
+import DataLayer
 
 @main
 struct MarvelApiSwiftUiTestApp: App {
     @Environment(\.scenePhase) private var phase
     private let pluggableApp = PluggableApp()
+    @Inject private var dataModule: DataModuleType
     
     var body: some Scene {
         WindowGroup {
-            MainScreen(viewModel: MainViewModel(initialState: .idle))
+            MainScreen(viewModel: MainViewModel(initialState: .idle,
+                                                marvelCharacterUsecase: dataModule.component()))
         }.onChange(of: phase) { newPhase in
             switch newPhase {
             
