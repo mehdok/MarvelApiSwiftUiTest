@@ -14,7 +14,7 @@ struct BasePreview<Content>: View where Content: View {
 
     public init(
         previewModes: [ColorScheme] = [.light, .dark],
-        previewDevices: [CCPreviewDevice] = [.iPhone8, .iPhoneXs],
+        previewDevices: [CCPreviewDevice] = [.iPhoneXs],
         @ViewBuilder content: @escaping () -> Content
     ) {
         self.previewModes = previewModes

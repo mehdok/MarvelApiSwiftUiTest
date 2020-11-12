@@ -54,8 +54,8 @@ public struct AppTypography {
         }
     }
 
-    let titleFont: Font!
-    let bodyFont: Font!
+    public let titleFont: Font!
+    public let bodyFont: Font!
 
     init() {
         titleFont = Font.custom(AppFontFamily.title.value,

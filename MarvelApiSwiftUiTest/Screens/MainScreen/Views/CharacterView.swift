@@ -28,7 +28,8 @@ struct CharacterView: View {
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .leading, vertical: .bottom), content: {
             poster
-            Text(title)
+            cellTitle
+
         })
         .frame(height: kCellHeight, alignment: .center)
     }
@@ -43,10 +44,25 @@ struct CharacterView: View {
                 .clipShape(Rectangle())
         }
     }
+    
+    private var cellTitle: some View {
+        HStack {
+            Text(title)
+                .padding(8)
+                .foregroundColor(.white)
+                .font(Font.Typography.titleFont)
+                .lineLimit(1)
+            Spacer()
+        }
+        .frame(maxWidth: .infinity)
+        .background(LinearGradient(gradient: Gradient(colors: [.clear, .black]), startPoint: .top, endPoint: .bottom))
+    }
 }
 
 struct CharacterView_Previews: PreviewProvider {
     static var previews: some View {
-        CharacterView(character: MockJson.charactersSample[0])
+        BasePreview {
+            CharacterView(character: MockJson.charactersSample[0])
+        }
     }
 }

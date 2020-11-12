@@ -11,7 +11,7 @@ import DomainLayer
 class MockJson: NSObject {
     static var charactersSample: [Character] {
         let jsonData = mockJson("CharactersData")!
-        return try! JSONDecoder().decode([Character].self, from: jsonData)
+        return try! JSONDecoder().decode(CharacterDataWrapper.self, from: jsonData).data?.results ?? []
     }
 
 }
