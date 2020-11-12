@@ -8,13 +8,15 @@
 import DomainLayer
 import struct Kingfisher.KFImage
 import SwiftUI
+import DesignSystem
 
 struct CharacterView: View {
+    let kCellHeight: CGFloat = 240.0
     let character: Character
 
     var imageUrl: URL? {
         if let imagePath = character.thumbnail?.path, let imageExt = character.thumbnail?.ext {
-            return URL(string: "\(imagePath)\(imageExt)")
+            return URL(string: "\(imagePath).\(imageExt)")
         }
         return nil
     }
@@ -28,12 +30,18 @@ struct CharacterView: View {
             poster
             Text(title)
         })
+        .frame(height: kCellHeight, alignment: .center)
     }
 
     private var poster: some View {
-        KFImage(imageUrl)
-            .aspectRatio(contentMode: .fit)
-            .frame(idealHeight: 100)
+        GeometryReader { geo in
+            KFImage(imageUrl)
+                .cancelOnDisappear(true)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: geo.size.width, height: kCellHeight, alignment: .center)
+                .clipShape(Rectangle())
+        }
     }
 }
 
